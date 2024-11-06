@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BT layout 9</title>
+    <style>
+        /* Đặt lại margin cho toàn bộ trang */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(133, 133, 133);
+        }
+
+        /* Phần lớn trang chính */
+        .mother {
+            position: relative;
+            width: 80%;
+            margin: auto;
+            height: 1150px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ */
+        }
+
+        /* Đoạn chính bên trái và bên phải */
+        .big {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Bên trái */
+        .left {
+            width: 35%;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: rgb(6, 6, 24);
+            border-radius: 0 100px 100px 0;
+            color: #f0f0f0;
+        }
+
+        /* Bên phải */
+        .right {
+            width: 65%;
+            height: 100%;
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+            color: rgb(50, 50, 50);
+        }
+
+        /* Chỗ hiển thị thông tin nhỏ bên dưới */
+        .small {
+            position: absolute;
+            top: 385px;
+            left: 0;
+            width: 100%;
+            height: 75px;
+            background-color: rgb(0, 142, 189);
+            z-index: 1;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* Phần header */
+        .header {
+            height: 400px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Chỉnh tiêu đề */
+        .header h1 {
+            font-size: 2.5em;
+            color: rgb(0, 0, 94);
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .header h2 {
+            font-size: 1.5em;
+            color: rgb(4, 122, 161);
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        /* Lịch sử và sở thích */
+        .history {
+            margin-top: 50px;
+            text-align: left;
+        }
+
+        .history h1 {
+            font-size: 2em;
+            font-weight: bold;
+            color: rgb(0, 0, 94);
+            margin-bottom: 15px;
+        }
+
+        /* Định dạng bảng */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid rgb(0, 0, 94);
+            padding: 12px;
+            text-align: left;
+            font-size: 1.1em; /* Tăng cỡ chữ cho bảng */
+        }
+
+        th {
+            background-color: rgb(27, 32, 54);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgb(240, 240, 240);
+        }
+
+        tr:hover {
+            background-color: rgb(220, 220, 220);
+        }
+
+        /* Trích dẫn */
+        blockquote {
+            font-size: 1.8em; /* Tăng kích thước chữ */
+            line-height: 1.5;
+            color: #154e3b;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Thêm hiệu ứng hover cho các mục lịch sử */
+        .history p:hover {
+            background-color: rgb(245, 245, 245);
+            padding: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Đảm bảo giao diện mobile thân thiện */
+        @media (max-width: 768px) {
+            .mother {
+                width: 100%;
+                height: auto;
+            }
+
+            .big {
+                flex-direction: column;
+            }
+
+            .left, .right {
+                width: 100%;
+                height: auto;
+            }
+
+            .small {
+                top: auto;
+                position: static;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: 10px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="mother">
+        <div class="big">
+            <!-- Bên trái -->
+            <div class="left">
+                <div class="header">
+                    <img src="https://th.bing.com/th/id/OIP.LBMEj4oMcV2MOdqhieYqAgHaGL?w=228&h=190&c=7&r=0&o=5&pid=1.7" style="width: 335px; height: 335px; border-radius: 50%; object-fit: cover; border: 3px solid white;">
+                </div>
+                <div class="history">
+                    <h1>KỸ NĂNG</h1><hr>
+                    <p>🧧 Kỹ năng giao tiếp</p>
+                    <p>🧧 Kỹ năng thuyết trình</p>
+                    <p>🧧 Khả năng lãnh đạo</p>
+                    <p>🧧 Lập kế hoạch</p>
+                    <p>🧧 Giải quyết vấn đề</p>
+                    <br>
+                    <h1>SỞ THÍCH</h1><hr>
+                    <p>🍖 Ăn</p>
+                    <p>💤 Ngủ</p>
+                    <p>📔 Đọc truyện</p>
+                    <p>🎧 Nghe nhạc</p>
+                    <p>🍲 Nấu ăn </p>
+                </div>
+            </div>
+
+            <!-- Bên phải -->
+            <div class="right">
+                <div class="header"><br><br>
+                    <blockquote>
+                        <h1>Phan Huy Hoàng</h1>
+                        <h2>Công Nghệ Thông Tin K48I</h2>
+                    </blockquote>
+                </div>
+                <div class="history">
+                    <h1>LỊCH SỬ BẢN THÂN</h1>
+                    <p>Từ 2012-2017: Học sinh Tiểu Học Đức Ninh</p>
+                    <p>Từ 2017-2021: Học sinh THCS Đức Ninh</p>
+                    <p>Từ 2021-2024: Học sinh THPT Đồng Hới</p>
+                    <p>Từ 2024-2028: Sinh viên Khóa K48, ngành Công Nghệ Thông Tin, Trường Đại Học Khoa Học</p>
+
+                    <h1>KẾT QUẢ HỌC TẬP</h1>
+                    <table>
+                        <tr>
+                            <th>Học phần</th>
+                            <th>Số tín chỉ</th>
+                            <th>Điểm hệ 10</th>
+                            <th>Điểm hệ 4</th>
+                            <th>Điểm chữ</th>
+                        </tr>
+                        <tr>
+                            <td colspan="5">Học kỳ 1 năm học 2022-2023</td>
+                        </tr>
+                        <tr>
+                            <td>Triết học Mác - LêNin</td>
+                            <td>3</td>
+                            <td>9</td>
+                            <td>B</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Kỹ năng mềm</td>
+                            <td>3</td>
+                            <td>8</td>
+                            <td>A</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Nhập môn lập trình</td>
+                            <td>3</td>
+                            <td>7</td>
+                            <td>B</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Cơ Sở Toán</td>
+                            <td>3</td>
+                            <td>9</td>
+                            <td>B</td>
+                            <td>3</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="small">
+                <div>Ngày sinh: 23/05/2006 🎂</div>
+                <div>Số điện thoại: 0912914427 📞</div>
+                <div>Địa chỉ: Ngõ 35 Ngự Bình, Thừa Thiên Huế🏘️</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

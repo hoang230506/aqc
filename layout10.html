@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BT Layout 10</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(255, 215, 179);
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif; /* Elegant and modern font */
+            -webkit-font-smoothing: antialiased; /* Smooth fonts on macOS */
+            -moz-osx-font-smoothing: grayscale; /* Smooth fonts on macOS */
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+        }
+
+        .big1 {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .big1a {
+            flex: 1;
+            height: 120px;
+            margin: 1%;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 120px;
+            font-size: 22px;
+            font-weight: 700; /* Bolder text for better impact */
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: background-color 0.3s, transform 0.3s ease-in-out;
+            position: relative;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
+        .big1a:hover {
+            background-color: #f3f3f3;
+            transform: translateY(-5px); /* Subtle hover effect */
+        }
+
+        .borcelle-food {
+            background-color: rgb(255, 178, 54);
+            border-radius: 0 0 15px 15px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 3.5em;
+            color: rgb(42, 96, 0);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5em;
+            line-height: 1.7;
+            font-weight: 300;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 15px 50px;
+            background-color: rgb(250, 117, 0);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: darkorange;
+            transform: scale(1.05); /* Slight hover effect */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
+        }
+
+        input[type="text"] {
+            padding: 15px 25px;
+            border: 2px solid #ccc;
+            border-radius: 30px;
+            font-size: 1.1em;
+            font-weight: 500;
+            margin-bottom: 15px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #ff7f00;
+            outline: none;
+        }
+
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .big3 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .big3a {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .big3a1 {
+            flex: 1;
+            margin: 2%;
+        }
+
+        .big3b {
+            display: flex;
+            justify-content: space-between;
+            margin: 1%;
+            flex-wrap: wrap;
+        }
+
+        .big3b1 {
+            flex: 1;
+            margin: 1%;
+            position: relative;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add soft shadow to images */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="big1">
+            <div class="big1a">Menus</div>
+            <div class="big1a">Blog/Article</div>
+            <div class="big1a borcelle-food">
+                <div class="svg-container">
+                    <svg width="200" height="100">
+                        <path id="curve" fill="transparent" d="M 10,80 A 80,30 0 0,1 190,80" />
+                        <text fill="darkgreen" font-size="20" font-weight="bold">
+                            <textPath href="#curve" startOffset="50%" text-anchor="middle">
+                                BORCELLE FOOD
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
+            </div>
+            <div class="big1a">FAQ</div>
+            <div class="big1a">Contact Us</div>
+        </div>
+
+        <div class="big2">
+            <h1>PREPARE YOUR <br>MEAL IN 15 MINUTES</h1>
+            <p>Select from a varied weekly menu featuring<br>15-minute recipes that are freshly prepared<br>and conveniently delivered to your door!</p>
+            <div class="button-container">
+                <button>Our Store List</button>
+                <button>Our Price List</button>
+            </div>
+            <form action="">
+                <div style="font-size: 1.5em; color: rgb(42, 96, 0); font-weight: bold;">Let's stay in touch!</div>
+                <input type="text" id="fname" name="fname" placeholder="Enter your e-mail">
+                <span style="font-size: 1.5em; color: #333;">✈️</span>
+            </form>
+        </div>
+
+        <div class="big3">
+            <div class="big3a">
+                <div class="big3a1"><img src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/465730074_1118494759863347_311729376494003713_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=RMVVa0FwK6gQ7kNvgFz59G1&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=A25nlUDl1_HxCqZ_6scsxoT&oh=00_AYCTm_N0QxqanR79mJ3nM83sjZw5PSe3gW1lJPPs0MOu8g&oe=6730EBDD" alt="Image 1"></div>
+                <div class="big3a1"><img src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/465791290_1118494789863344_8948707367062487947_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=BF5-7qcng7QQ7kNvgFWStyR&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=AUJrnBNOtrXrUe7Xt9DXfrt&oh=00_AYDC2h4MTQmDqOEnK0iy3BXzwtN6mv2mg35MHAzYKWP-Cg&oe=67310A70" alt="Image 2"></div>
+            </div>
+            <div class="big3b">
+                <div class="big3b1">
+                    <img src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/466010202_1118494839863339_6926425292332116919_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=wvnmwDDjN7gQ7kNvgGaFcry&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=ANQhPX0vuo8d_iaoGzkQWcd&oh=00_AYAkKW3Nw1cfPlJ6D31szBwrxupaYgknxcL6J3uDIREWhg&oe=6730F2F5" alt="Image 3">
+                </div>
+                <div class="big3b1">
+                    <img src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/465697662_1118494873196669_1580721218358130848_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=q7Cgctc13rEQ7kNvgGcHLjR&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=An_PIKLBxaQEF4ayhhd4hWo&oh=00_AYBVgg25g5MGnnBSREeRtjxCa83o14kAJTqRcrCTgvuvYg&oe=67310D11" alt="Image 4">
+                </div>
+                <div class="big3b1">
+                    <img src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/465663423_1118494923196664_482170454037966015_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=gjnO7iLe8-kQ7kNvgFuUUeL&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=A12Rl-okZnTmm0StEE7yWKt&oh=00_AYAg41tasSfxymfLhYtn-kXKDfaDA4bzHWugRF-vlgeLdg&oe=6730FC36" alt="Image 5">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

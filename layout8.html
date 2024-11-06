@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Tiêu Đề Trên Cùng</title>
+    <style>
+        /* Reset các margin và padding của body */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        /* Background container */
+        .container {
+            background-image: url('/Layout/btlayout81.PNG');
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            position: relative;
+        }
+
+        /* Thanh điều hướng (navigation) */
+        .nav {
+            display: flex; 
+            justify-content: space-evenly;
+            background-color: rgba(245, 245, 245, 0.8); /* Màu nền nhẹ nhàng và trong suốt */
+            border-radius: 0 0 20px 20px;
+            padding: 12px 0;
+            position: absolute; 
+            top: 0; 
+            width: 80%; 
+            margin-left: 10%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ nhẹ để nổi bật */
+        }
+
+        /* Các phần tử trong thanh điều hướng */
+        .nav div {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #d35400;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* Hiệu ứng hover cho các mục trong navigation */
+        .nav div:hover {
+            color: white;
+            background-color: #d35400;
+            border-radius: 10px;
+        }
+
+        /* Tiêu đề và nội dung */
+        h1 {
+            text-align: center;
+            color: #e74c3c;
+            font-size: 3em;
+            margin: 30px 0;
+            font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+        }
+
+        p {
+            text-align: center;
+            color: #34495e;
+            font-size: 1.5em;
+            margin: 0 10%;
+            line-height: 1.6;
+        }
+
+        /* Chỉnh sửa kích thước các hình ảnh */
+        .image-section {
+            width: 80%;
+            margin-left: 10%;
+            height: auto;
+            margin-top: 30px;
+        }
+
+        .image-section img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        /* Hiệu ứng hover cho hình ảnh */
+        .image-section img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Phần cuối hình ảnh */
+        .footer-image {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Thanh điều hướng -->
+        <div class="nav">
+            <div><u>TRANG CHỦ</u></div>
+            <div>KHUNG CHƯƠNG TRÌNH</div>
+            <div>CA SĨ KHÁCH MỜI</div>
+            <div>GIAN HÀNG</div>
+            <div>THÔNG TIN CHƯƠNG TRÌNH</div>
+        </div>
+
+        <!-- Hình ảnh lớn ở trên cùng -->
+        <img src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/466045785_1118494696530020_780888098558781486_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Q1ITbYUc_ogQ7kNvgFByN_9&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=A1oa8vbVqywDpEZY7sFdCOk&oh=00_AYBw8GlWM59qyiOgvOcjJ60wLqFFivuCXUEky7WoO0Qbpw&oe=6730EA7E" style="width: 100%; height: 100%; object-fit: cover;">
+
+    </div>
+
+    <!-- Tiêu đề và mô tả -->
+    <div style="margin-top: 5%;">
+        <h1>IT CAMPUS 2023</h1>
+        <p>
+            Với những hoạt động vô cùng sôi nổi của ngày hội sẽ mang đến cho các bạn nhiều cung bậc cảm xúc!
+        </p>
+    </div>
+
+    <!-- Hình ảnh mô tả chính -->
+    <div class="image-section">
+        <img src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/465782278_1118494649863358_5154630977568019175_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rLhqcEDlPFYQ7kNvgHPyXLe&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=AekfkQsqZeLHUiFqyOb6r2m&oh=00_AYASlABEWldi02CTPyxlpqPFtrwXYgPxviPpcMVe26Vs8A&oe=6730F33F" alt="Event Image">
+    </div>
+
+    <!-- Hình ảnh cuối cùng -->
+    <div class="footer-image">
+        <img src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/465815870_1118494746530015_2031267765311547109_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Z4AZHf5zi8MQ7kNvgFqxdEe&_nc_zt=23&_nc_ht=scontent.fdad3-6.fna&_nc_gid=AFYNLqAZnAQehqqa0WhJFMs&oh=00_AYClPz3eAFes-Mx7nZMfILofFkfjNSpRCMBbRYl2qbsdFw&oe=6730DC14" alt="Footer Image" width="100%">
+    </div>
+
+</body>
+</html>

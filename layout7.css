@@ -1,0 +1,182 @@
+/* Reset các thuộc tính mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body chung cho toàn trang */
+body {
+    background-color: #f5f5f5; /* Nền sáng nhẹ */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Phần Header */
+.bt7a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bt7a1,
+.bt7a3 {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.bt7a2 p {
+    font-size: 2em;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+    text-align: center;
+}
+
+.icon {
+    font-size: 30px;
+}
+
+button {
+    border: 1px solid #333;
+    border-radius: 25px;
+    background-color: transparent;
+    padding: 10px 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* Phần bảng (menu) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+td {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #333;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+td:hover {
+    background-color: #f2f2f2;
+}
+
+.bang2 {
+    width: 20%;
+}
+
+.bang2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Phần văn bản mô tả */
+.bt7d1 p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.5;
+}
+
+.bt7d2 button {
+    background-color: #333;
+    color: white;
+    border-radius: 25px;
+    padding: 12px 40px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+}
+
+.bt7d2 button:hover {
+    background-color: #e6a600;
+}
+
+/* Phần hình ảnh chính */
+.bt7c img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.bt7c img:hover {
+    transform: scale(1.05);
+}
+
+/* Phần giao diện danh mục sản phẩm */
+.bt7e table {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.bt7e td {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bt7e td:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.bang2 img {
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Thiết kế cho mobile */
+@media (max-width: 768px) {
+    .bt7a {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bt7a1,
+    .bt7a3 {
+        justify-content: center;
+    }
+
+    .bt7a2 p {
+        font-size: 1.5em;
+    }
+
+    table td {
+        padding: 15px;
+    }
+
+    .bt7d2 button {
+        width: 100%;
+    }
+
+    .bt7e table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .bt7e td {
+        width: 100%;
+        padding: 10px;
+    }
+}
